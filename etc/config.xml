@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <slack>
+            <general>
+                <enable>0</enable>
+                <display_text>https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX</display_text>
+                <before_message>Customers bought the following</before_message>
+                <after_message>thank you</after_message>
+                <customer_signup>0</customer_signup>
+                <customer_order_complete>0</customer_order_complete>
+                <order_items>0</order_items>
+            </general>
+        </slack>
+    </default>
+</config>
