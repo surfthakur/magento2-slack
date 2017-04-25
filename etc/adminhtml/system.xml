@@ -27,6 +27,9 @@
                     <label>Test Web hook uri</label>
                     <frontend_model>Surfarazthakur\Slack\Block\System\Config\Testapi</frontend_model>
                     <comment>After updating the web hook uri you can click this button to test that its working.</comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
                 </field>
 
                 <field id="before_message" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">

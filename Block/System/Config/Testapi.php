@@ -22,7 +22,6 @@ class Testapi extends \Magento\Config\Block\System\Config\Form\Field
 	public function getAjaxUrl()
 	{
 		return $this->getUrl('slack/system_config/testapi');
-//		return $this->getUrl('slack/api/develop');
 	}
 
 	public function getButtonHtml()
@@ -32,7 +31,7 @@ class Testapi extends \Magento\Config\Block\System\Config\Form\Field
 		)->setData(
 			[
 				'id'    => 'testapi_button',
-				'label' => __('TEST this'),
+				'label' => __('TEST api'),
 			]
 		);
 

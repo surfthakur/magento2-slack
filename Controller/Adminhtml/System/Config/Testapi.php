@@ -9,6 +9,12 @@ class Testapi extends Action
 	protected $_utils;
 	protected $_jsonFactory;
 
+	/**
+	 * Testapi constructor.
+	 * @param Action\Context                     $context
+	 * @param \Surfarazthakur\Slack\Helper\Utils $utils
+	 * @param JsonFactory                        $jsonFactory
+	 */
 	public function __construct(
 		Action\Context $context,
 		\Surfarazthakur\Slack\Helper\Utils $utils,
@@ -19,9 +25,12 @@ class Testapi extends Action
 		$this->_jsonFactory = $jsonFactory;
 	}
 
+	/**
+	 * @return $this
+	 */
 	public function execute()
 	{
-		$text = ["text" => "@here Magento test \n seems to work \n Congratulations :innocent:"];
+		$text = ["text" => "Magento test \n seems to work \n Congratulations :thumbsup:"];
 		$result = $this->_jsonFactory->create();
 		$this->_utils->curl($this->_utils->getUrl(), $text);
 
@@ -34,6 +43,9 @@ class Testapi extends Action
 		);
 	}
 
+	/**
+	 * @return bool
+	 */
 	protected function _isAllowed()
 	{
 		return $this->_authorization->isAllowed('Surfarazthakur_Slack::testapi');
